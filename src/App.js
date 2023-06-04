@@ -9,11 +9,11 @@ function App() {
   const handleSubmit = async (event) => {
   event.preventDefault();
   try{
-      await axios.post("http://localhost:5000/grades",{
+      var result = await axios.post("http://localhost:5000/grades",{
       firstname: fname,
       lastname: lname
       });
-      await axios.get("http://localhost:5000/grades").then(resp=> console.log(resp.data));
+      setStudent_data(result.data)
   }
   catch(error)
   {
@@ -32,7 +32,16 @@ function App() {
          <label>Last Name </label>
          <input type="text" name="lname" required placeholder='Last Name ...' value={lname} onChange={(e) => setLname(e.target.value)} />
          <button onClick = {handleSubmit}> Next</button>
+         {(Object.keys(student_data).length > 0) && <>
+          <p>First Name: {student_data.FirstName}</p>
+          <p>Last Name: {student_data.LastName}</p>
+          <p>Grade in Java: {student_data.Java}</p>
+          <p>Grade in Python: {student_data.Python}</p>
+          <p>Grade in C: {student_data.C}</p>
+        </>}
        </form>
+        
+       
        
           
         
