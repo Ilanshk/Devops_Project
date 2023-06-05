@@ -19,7 +19,6 @@ function App() {
   {
     console.log(error);
   }
-    
       
   };
 
@@ -40,12 +39,6 @@ function App() {
           <p>Grade in C: {student_data.C}</p>
         </>}
        </form>
-        
-       
-       
-          
-        
-       
     </div>
   );
   
