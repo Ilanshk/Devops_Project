@@ -1,6 +1,6 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+import express from 'express';
+import cors  from 'cors';
+import bodyParser from 'body-parser';
 
 const studentsData = [
   {
@@ -99,4 +99,4 @@ app.listen(port, () => {
   console.log(`Server is up and running at port: ${port}`);
 });
 
-module.exports = app;
+export default app;
