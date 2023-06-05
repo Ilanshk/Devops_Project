@@ -23,7 +23,7 @@ jobs:
           command: cd src && npm install
       - run:
            name: run linter
-           command: cd .. & cd Backend && npm run lint
+           command: cd .. && cd Backend && npm run lint
       - run:
             name: run tests
             command: cd Backend && npm run test 
