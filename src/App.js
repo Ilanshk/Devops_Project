@@ -1,6 +1,6 @@
 import './App.css';
 import {useState} from "react";
-const axios = require('axios');
+import axios from 'axios';
 function App() {
   const [fname,setFname]= useState("");
   const[lname,setLname] = useState("");
