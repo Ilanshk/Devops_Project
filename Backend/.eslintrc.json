@@ -18,6 +18,13 @@
          "react"
     ],
     "rules": {
-        "linebreak-style": 0
+        "linebreak-style": 0,
+        "import/extensions": ["error", "always", {
+            "js": "never",
+            "jsx": "never",
+            "mjs": "never",
+            "ts": "never",
+            "tsx": "never"
+          }]
     }
 }

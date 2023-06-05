@@ -1,6 +1,7 @@
 const axios = require('axios') ;
-const app = require('../index');
+const app = require('./index.js');
 const request = require('supertest');
+
 
 describe("Tests For Register Page",()=>{
     it("test 1: ",async ()=>{

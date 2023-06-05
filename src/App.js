@@ -9,7 +9,7 @@ function App() {
   const handleSubmit = async (event) => {
   event.preventDefault();
   try{
-      var result = await axios.post("http://localhost:5000/grades",{
+      var result = await axios.post("http://https://registerpageserver.onrender.com/grades",{
       firstname: fname,
       lastname: lname
       });
