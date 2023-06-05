@@ -16,17 +16,17 @@ jobs:
     steps:
       - checkout 
       - run:
-          name: Installing npm packages at server side
-          command: cd Backend && npm install
-      - run:
           name: Installing npm packages at client side
           command: cd src && npm install
       - run:
+          name: Installing npm packages at servert side
+          command: cd Backend && npm install
+      - run:
            name: run linter
-           command: cd .. && cd Backend && npm run lint
+           command: npm run lint
       - run:
             name: run tests
-            command: cd Backend && npm run test 
+            command: npm run test 
 
 workflows:
   project-workflow:
